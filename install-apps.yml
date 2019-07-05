@@ -2,20 +2,21 @@
 - name: Set up a laptop
   hosts: laptop
   gather_facts: true
-  become: yes
+  become: false
   tasks:
   - import_role:
       name: gentoo-services-ctl
+    become: yes
     when:
     #- ansible_distribution == 'Gentoo'
     - ansible_distribution != 'MacOSX'
   - import_role:
       name: gentoo-apps
+    become: yes
     when:
     #- ansible_distribution == 'Gentoo'
     - ansible_distribution != 'MacOSX'
   - import_role:
       name: macos-apps
-    become: false
     when:
     - ansible_distribution == 'MacOSX'
