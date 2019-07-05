@@ -1,5 +1,5 @@
 ---
-- name: Set up gentoo laptop
+- name: Set up a laptop
   hosts: laptop
   gather_facts: true
   become: yes
