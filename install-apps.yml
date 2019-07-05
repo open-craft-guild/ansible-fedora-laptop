@@ -8,14 +8,12 @@
       name: gentoo-services-ctl
     become: yes
     when:
-    #- ansible_distribution == 'Gentoo'
-    - ansible_distribution != 'MacOSX'
+    - ansible_distribution == 'Gentoo'
   - import_role:
       name: gentoo-apps
     become: yes
     when:
-    #- ansible_distribution == 'Gentoo'
-    - ansible_distribution != 'MacOSX'
+    - ansible_distribution == 'Gentoo'
   - import_role:
       name: macos-apps
     when:
