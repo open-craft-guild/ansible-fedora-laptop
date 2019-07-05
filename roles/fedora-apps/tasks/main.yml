@@ -3,11 +3,15 @@
   dnf:
     name:
     - asciinema
-    - fira-code
+    - code  # VS Code
+    - fira-code-fonts
     - fzf
     - git
-    - keybase
+    - htop
+    - https://prerelease.keybase.io/keybase_amd64.rpm  # Keybase
     - kitty
     - neovim
+    - tmate
     - tmux
     - yubikey-manager
+    update_cache: false
