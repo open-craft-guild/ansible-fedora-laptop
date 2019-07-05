@@ -1,4 +1,48 @@
 ---
+- name: Add an RPM repo for the Fira Code Fonts
+  yum_repository:
+    baseurl: >-
+      https://copr-be.cloud.fedoraproject.org/results/evana/fira-code-fonts/fedora-$releasever-$basearch/
+    description: Copr repo for fira-code-fonts owned by evana
+    enabled: yes
+    # enabled_metadata: yes
+    gpgcheck: yes
+    gpgkey: https://copr-be.cloud.fedoraproject.org/results/evana/fira-code-fonts/pubkey.gpg
+    name: evana-fira-code-fonts
+    repo_gpgcheck: no
+    skip_if_unavailable: yes
+    # type: rpm-md  # not supported by yum_repository
+- name: Add an RPM repo for Kitty
+  yum_repository:
+    baseurl: >-
+      https://copr-be.cloud.fedoraproject.org/results/gagbo/kitty-latest/fedora-$releasever-$basearch/
+    description: Copr repo for kitty-latest owned by gagbo
+    enabled: yes
+    # enabled_metadata: yes
+    gpgcheck: yes
+    gpgkey: https://copr-be.cloud.fedoraproject.org/results/gagbo/kitty-latest/pubkey.gpg
+    name: gagbo-kitty-latest
+    repo_gpgcheck: no
+    skip_if_unavailable: yes
+    # type: rpm-md  # not supported by yum_repository
+- name: Add an RPM repo for VS Code
+  yum_repository:
+    baseurl: https://packages.microsoft.com/yumrepos/vscode
+    description: Visual Studio Code
+    enabled: yes
+    gpgcheck: yes
+    gpgkey: https://packages.microsoft.com/keys/microsoft.asc
+    name: code
+- name: Update RPM repos cache
+  command:
+    argv:
+    - dnf
+    - makecache
+  register: dnf_check_update_result
+  changed_when:
+  - dnf_check_update_result.rc == 100
+  failed_when:
+  - dnf_check_update_result.rc not in [0, 100]
 - name: Install apps via dnf
   dnf:
     name:
