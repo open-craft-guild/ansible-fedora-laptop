@@ -1,0 +1,13 @@
+---
+- name: Install apps via dnf
+  dnf:
+    name:
+    - asciinema
+    - fira-code
+    - fzf
+    - git
+    - keybase
+    - kitty
+    - neovim
+    - tmux
+    - yubikey-manager

@@ -18,3 +18,9 @@
       name: macos-apps
     when:
     - ansible_distribution == 'MacOSX'
+  - import_role:
+      name: fedora-apps
+    become: yes
+    become_method: su
+    when:
+    - ansible_distribution == 'Fedora'  # and  ansible_os_family == RedHat
