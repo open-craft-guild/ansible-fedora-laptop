@@ -1,6 +1,6 @@
 --- # vim:se ft=ansible:
-- name: Ensure that iBank2 UA Websigner plugin is installed
-  import_tasks: ibank2_websigner.yml
+# - name: Ensure that iBank2 UA Websigner plugin is installed
+#   import_tasks: ibank2_websigner.yml
 - name: Ensure that Git is configured
   import_tasks: git.yml
 - name: Ensure that NeoVim is configured
@@ -11,10 +11,10 @@
   import_tasks: omz.yml
 - name: Ensure that NodeJS is configured with nvm
   import_tasks: nvm.yml
-- name: Ensure that Awesome WM is configured
-  import_tasks: awesome.yml
-  when:
-  #- ansible_distribution == 'Gentoo'
-  - ansible_distribution != 'MacOSX'
+# - name: Ensure that Awesome WM is configured
+#   import_tasks: awesome.yml
+#   when:
+#   #- ansible_distribution == 'Gentoo'
+#   - ansible_distribution != 'MacOSX'
 - name: Ensure that source code projects are in place
   import_tasks: src.yml
