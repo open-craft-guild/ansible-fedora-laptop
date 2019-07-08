@@ -6,16 +6,16 @@ node_versions:
   - 8
   default: *def_node_ver
 git_options:
-  commit.gpgsign: true
+  # commit.gpgsign: true
   commit.template: >-
-    ~/src/github/webknjaz/ansible-gentoo-laptop/roles/gentoo-userspace/files/git-commit.template
+    ~/src/github/tylichl/ansible-fedora-laptop/roles/gentoo-userspace/files/git-commit.template
   core.repositoryFormatVersion: 1
   gpg.program: gpg2
   pull.ff: only
   push.gpgsign: if-asked
-  user.email: wk@sydorenko.org.ua
-  user.name: Sviatoslav Sydorenko
-  user.signingkey: 9345E8FEA89CA455
+  user.email: ladislav.tylich@kentigen.com
+  user.name: Ladislav Tylich
+  # user.signingkey: 9345E8FEA89CA455
 vundle:
   self_plugin: VundleVim/Vundle.vim
   bundle_path: ~/.config/nvim/bundle
@@ -152,7 +152,7 @@ oh_my_zsh:
   plugin_settings:
     ssh-agent:
       agent-forwarding: on
-      identities: id_rsa id_rsa_encrypted
+      identities: id_rsa
       #lifetime: 4h  # Forever by default
     tty-solarized:
       theme-shade: dark
@@ -164,140 +164,8 @@ code_workspace:
       ssh_host_keys:
       - ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAq2A7hRGmdnm9tUDbO9IDSwBK6TbQa+PXYPCPy6rbTrTtw7PHkccKrpp0yVhp5HdEIcKr6pLlVDBfOLX9QUsyCOV0wzfjIJNlGEYsdlLJizHhbn2mUjvSAHQqZETYP81eFzLQNnPHt4EVVUh7VfDESU84KezmD5QlWpXLmvU31/yMf+Se8xhHTvKSCZIFImWwoG6mbUoWf9nzpIoaSjB+weqqUUmpaaasXVal72J+UX2B+2RPW3RcT0eOzQgqlJL3RKrTJvdsjE3JEAvGq3lGHSZXy28G3skua2SmVi/w4yCE6gbODqnTWlg7+wC604ydGXA8VJiS5ap43JXiUFFAaQ==
       slugs:
-      - ahlinc/invoicer
-      - aio-libs/aiohttp
-      - aio-libs/aiohttp-devtools
-      - aio-libs/multidict
-      - amol-/dukpy
-      - ansible/ansible
-      - ansible/ansible-examples
-      - ansible/ansible-lint
-      - ansible/ansible-lint-action
-      - ansible/ansibullbot
-      - ansible/foreman-test-container
-      - ansible/lightbulb
-      - ansible/molecule
-      - bcoca/collection
-      - benjaminp/six
-      - bitprophet/alabaster
-      - candlepin/candlepin
-      - cherrypy/cheroot
-      - cherrypy/cherrypy
-      - cherrypy/magicbus
-      - dokku/dokku-mariadb
-      - EuroPython/ep-config
-      - FreeCAD/FreeCAD
-      - gentoo/gentoo
-      - github-actions-playground/enroll-me
-      - gliderlabs/herokuish
-      - itkpi/beej-s-guide-to-network
-      - jctanner/ansible-reproducers
-      - joepvd/tty-solarized
-      - kpi-web-guild/django-girls-blog-serhii73
-      - libgit2/pygit2
-      - lxc/python2-lxc
-      - lxc/python3-lxc
-      - matrixise/europython-config-the-revenant
-      - open-craft-guild/aio-feature-flags
-      - open-craft-guild/prze-merge-2017-kurwa
-      - patron-it/ansible-opencanary
-      - patron-it/opencanary
-      - pyca/bcrypt
-      - pyenv/pyenv
-      - PyGithub/PyGithub
-      - pypa/auditwheel
-      - pypa/browntruck
-      - pypa/get-pip
-      - pypa/manylinux
-      - pypa/pip
-      - pypa/pipenv
-      - pypa/pipfile
-      - pypa/setuptools
-      - pypa/setuptools_scm
-      - pypa/ssl
-      - pypa/twine
-      - pypa/virtualenv
-      - pypa/warehouse
-      - pypa/wheel
-      - python/cherry_picker
-      - python/core-workflow
-      - python/cpython
-      - python/miss-islington
-      - python-hyper/h11
-      - python-trio/trustme
-      - re-actors/manylinux1_x86_64-action
-      - re-actors/pypi-action
-      - RedHatOfficial/RedHatOfficial.github.io
-      - rtfd/readthedocs-docker-images
-      - sanitizers/chronographer-github-app
-      - sanitizers/ci-mediator-github-app
-      - sanitizers/diactoros-github-app
-      - sanitizers/github-bot-tutorial
-      - sanitizers/octomachinery
-      - sclorg/s2i-python-container
-      - sdispater/poetry
-      - streetturtle/awesome-wm-widgets
-      - takluyver/flit
-      - tox-dev/detox
-      - tox-dev/gh-action-tox
-      - tox-dev/tox
-      - travis-ci/dpl
-      - travis-ci/travis-yml
-      - webknjaz/ansible.module_utils._text
-      - webknjaz/ansiwatch-bot
-      - webknjaz/check-in
-      - webknjaz/docker-freecad-cli
-      - webknjaz/docker-freecad-cli-dev
-      - webknjaz/fortunate-pkg
-      - webknjaz/gentoo-overlay
-      - webknjaz/mrgall-ansible
-      - webknjaz/pypi-deployment
-      - webknjaz/talk-drafts
-      - webknjaz/talks
-      - webknjaz/twitter-reporter
-      - willthames/ansible-review
-      - yaml/pyyaml
-      forked_as:
-        amol-/dukpy: webknjaz/dukpy
-        ansible/ansible: webknjaz/ansible
-        ansible/ansible-lint: webknjaz/ansible-lint
-        ansible/ansibullbot: webknjaz/ansibullbot
-        ansible/lightbulb: webknjaz/lightbulb
-        ansible/molecule: webknjaz/molecule
-        benjaminp/six: webknjaz/six
-        bitprophet/alabaster: webknjaz/alabaster
-        FreeCAD/FreeCAD: webknjaz/FreeCAD
-        gentoo/gentoo: webknjaz/gentoo
-        gliderlabs/herokuish: webknjaz/herokuish
-        jctanner/ansible-reproducers: webknjaz/ansible-reproducers
-        joepvd/tty-solarized: webknjaz/tty-solarized
-        libgit2/pygit2: webknjaz/pygit2
-        lxc/python2-lxc: webknjaz/python2-lxc
-        lxc/python3-lxc: webknjaz/python3-lxc
-        pyca/bcrypt: webknjaz/bcrypt
-        pyenv/pyenv: webknjaz/pyenv
-        PyGithub/PyGithub: webknjaz/PyGithub
-        pypa/browntruck: sanitizers/browntruck
-        pypa/pip: webknjaz/pip
-        pypa/setuptools: webknjaz/setuptools
-        pypa/twine: webknjaz/twine
-        pypa/virtualenv: webknjaz/virtualenv
-        python/cherry_picker: webknjaz/cherry_picker
-        python/core-workflow: webknjaz/core-workflow
-        python/cpython: webknjaz/cpython
-        python-hyper/h11: webknjaz/h11
-        python-trio/trustme: webknjaz/trustme
-        RedHatOfficial/RedHatOfficial.github.io: >-
-          webknjaz/RedHatOfficial.github.io
-        sdispater/poetry: webknjaz/poetry
-        streetturtle/awesome-wm-widgets: webknjaz/awesome-wm-widgets
-        takluyver/flit: webknjaz/flit
-        tox-dev/detox: webknjaz/detox
-        tox-dev/tox: webknjaz/tox
-        travis-ci/dpl: webknjaz/dpl
-        travis-ci/travis-yml: webknjaz/travis-yml
-        willthames/ansible-review: webknjaz/ansible-review
-        yaml/pyyaml: webknjaz/pyyaml
+      - tylichl/ansible-fedora-laptop
+      forked_as: []
     - name: bitbucket
       fqdn: bitbucket.org
       ssh_host_keys:
@@ -310,11 +178,7 @@ code_workspace:
       - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCsj2bNKTBSpIYDEGk9KxsGh3mySTRgMtXL583qmBpzeQ+jqCMRgBqB98u3z++J1sKlXHWfM9dyhSevkMwSbhoR8XIq/U0tCNyokEi/ueaBMCvbcTHhO7FcwzY92WK4Yt0aGROY5qX2UKSeOvuP4D6TPqKF1onrSzH9bx9XUf2lEdWT/ia1NEKjunUqu1xOB/StKDHMoX4/OKyIzuS0q/T1zOATthvasJFoPrAjkohTyaDUz2LN5JoH839hViyEG82yB+MjcFV5MU3N1l1QL3cVUCh93xSaua1N85qivl+siMkPGbO5xR/En4iEY6K2XPASUEMaieWVNTRCtJ4S8H+9
       - ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBFSMqzJeV9rUzU4kWitGjeR4PWSa29SPqJ1fVkhtj3Hw9xjLVXVYrU9QlYWrOLXBpQ6KWjbjTDTdDkoohFzgbEY=
       - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAfuCHKVTjquxvt6CM6tdG4SLp1Btn/nOeHHE5UOzRdf
-      slugs:
-      - remak-dva/components-api
-      - remak-dva/docker-freecad-cli
-      - remak-dva/phex-recutech-mcs
-      - remak-dva/tbe-mcs
+      slugs: []
       forked_as: []
     - name: gitlab-kentigen
       fqdn: gitlab.kentigen.com
@@ -325,7 +189,8 @@ code_workspace:
       slugs:
       - so2019-037_tcl_tk/std-6
       - so2019-037_tcl_tk/std-6-original-tcl
-      forked_as: []
+      forked_as:
+        so2019-037_tcl_tk/std-6: ladislav.tylich/std-6
 
 ibank_websigner_plugin:
   url: https://ibank.procreditbank.com.ua/websigner-linux.bin
