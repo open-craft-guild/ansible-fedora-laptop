@@ -20,6 +20,8 @@
     - ansible_distribution == 'MacOSX'
   - import_role:
       name: fedora-apps
+    vars:
+      ansible_python_interpreter: /usr/bin/python3
     become: yes
     when:
     - ansible_distribution == 'Fedora'  # and  ansible_os_family == RedHat
