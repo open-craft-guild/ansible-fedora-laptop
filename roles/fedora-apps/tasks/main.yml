@@ -55,6 +55,7 @@
     - https://prerelease.keybase.io/keybase_amd64.rpm  # Keybase
     - kitty
     - neovim
+    - python3-libselinux
     - tmate
     - tmux
     - yubikey-manager
